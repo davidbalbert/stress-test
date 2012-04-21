@@ -4,7 +4,7 @@ require 'thread'
 port = ARGV[0] || 8080
 
 sock = Socket.new(:INET, :STREAM)
-sock.bind(Socket.pack_sockaddr_in(port, '127.0.0.1'))
+sock.bind(Socket.pack_sockaddr_in(port, '0.0.0.0'))
 sock.listen(50000)
 
 total_connections = 0
